@@ -23,14 +23,13 @@ body {
 
 header, .section_description {
     max-width: 1280px;
-    margin: 0 6rem 8rem 6rem;
+    margin: 1.5rem 6rem 10rem 6rem;
 }
 
 .header_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
 }
 
 .header_nav {
@@ -38,7 +37,7 @@ header, .section_description {
     background-color: var(--gray-color);
     width: 380px;
     height: 30px;
-    border-radius: 30px;
+    border-radius: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +60,7 @@ nav span {
     width: 77px;
     height: 100%;
     background: linear-gradient(45deg, #4f1919, #E33500);
-    border-radius: 30px;
+    border-radius: 13px;
     transition: .5s;
 }
 
@@ -78,15 +77,6 @@ nav a:nth-child(1):hover ~ span {
     width: 100px;
 }
 
-.button_cv {
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: bolder;
-    background-color: var(--orange-color);
-    color: var(--black-color);
-    border: none;
-}
 
 /* SECTION DESCRIPTION */
 
@@ -96,23 +86,57 @@ nav a:nth-child(1):hover ~ span {
     align-items: center;
 }
 
-.section_description h1 {
-    font-size: 3rem;
+
+.on_description {
+    text-align: center;
+}
+
+.on_description h1 {
+    font-size: 3.5rem;
     font-weight: bolder;
     color: var(--white-color);
 }
 
-.section_description h2 {
-    font-size: 3rem;
-    font-weight: lighter;
+.on_description h2 {
+    margin-top: 0.3rem;
+    display: block;
     color: var(--orange-color);
+    font-size: 3rem;
+    font-weight: 500;
+    border-right: 12px solid var(--orange-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: mark .5s step-end infinite, write 6s steps(22,end) infinite;
+}
+
+@keyframes mark {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes write {
+    20% {
+        width: 20.5ch;
+    }
+    70% {
+        width: 20.5ch;
+    }
+    85% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
 }
 
 .border_description {
-    margin-top: 3rem;
-    border: 1px solid var(--gray-color);
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     border-radius: 30px;
+    border: 2px solid var(--gray-color);
 }
 
 .container_description {
