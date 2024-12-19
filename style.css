@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --black-color: #010101;
+    --gray-color: #504E4E;
+    --orange-color: #E33500;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: "Roboto", serif;
+
+}
+
+header {
+    max-width: 1280px;
+    margin: 0 6rem;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.header_nav {
+    position: relative;
+    background-color: var(--gray-color);
+    width: 380px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a { 
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color);
+    padding: 0 16px;
+    z-index: 1;
+}
+
+nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 77px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #E33500);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+nav a:nth-child(1):hover ~ span {
+    left: 0;
+} nav a:nth-child(2):hover ~ span {
+    left: 71px;
+    width: 122px;
+} nav a:nth-child(3):hover ~ span {
+    left: 189px;
+    width: 95px;
+} nav a:nth-child(4):hover ~ span {
+    left: 280px;
+    width: 100px;
+}
+
+.button_cv {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: var(--orange-color);
+    color: var(--black-color);
+    border: none;
+}
