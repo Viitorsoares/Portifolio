@@ -21,15 +21,16 @@ body {
 
 }
 
-header, .section_description {
+header, .section_description, .section_skills {
     max-width: 1280px;
-    margin: 1.5rem 6rem 10rem 6rem;
+    margin: 1.5rem 6rem 0 6rem;
 }
 
 .header_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .header_nav {
@@ -77,13 +78,13 @@ nav a:nth-child(1):hover ~ span {
     width: 100px;
 }
 
-
 /* SECTION DESCRIPTION */
 
 .section_description {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10rem;
 }
 
 
@@ -92,7 +93,7 @@ nav a:nth-child(1):hover ~ span {
 }
 
 .on_description h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bolder;
     color: var(--white-color);
 }
@@ -101,8 +102,8 @@ nav a:nth-child(1):hover ~ span {
     margin-top: 0.3rem;
     display: block;
     color: var(--orange-color);
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 600;
     border-right: 12px solid var(--orange-color);
     white-space: nowrap;
     overflow: hidden;
@@ -165,3 +166,62 @@ nav a:nth-child(1):hover ~ span {
     background: linear-gradient(45deg, #4f1919, #E33500);
 
 }
+
+.section_skills { 
+    display: flex;
+    flex-direction: column;
+    padding-left: 3.1rem;
+    margin: 5rem;
+
+}
+
+.section_skills h3 {
+    text-align: justify;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--white-color);
+    margin-bottom: 2rem;
+}
+
+.hard_skills {
+    width: 100%;
+    height: 50px;
+}
+
+.merry-go-round {
+    width: 95%;
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.item {
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc(10 / var(--quantity) * var(--delay));
+}
+
+.item p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -50px;
+    }
+}
+
+.soft_skills {
+  margin-top: 5rem;
+}
+
